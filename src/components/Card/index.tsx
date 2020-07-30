@@ -19,7 +19,7 @@ const Card = ({ content }: CardProps) => {
     }
 
     loadData();
-  }, []);
+  }, [content]);
 
   return (
     <Container>
