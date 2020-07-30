@@ -12,4 +12,4 @@ const About: React.FC = () => (
   </Container>
 );
 
-export default About;
+export { About };
