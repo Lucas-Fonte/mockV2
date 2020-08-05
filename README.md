@@ -1,4 +1,6 @@
-### MockV2 ###
+![](https://raw.githubusercontent.com/Lucas-Fonte/mockV2/master/public/images/icons/apple-icon-152x152.png)
+
+---
 
 ![](https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&logoColor=white&color=2bbc8a)
