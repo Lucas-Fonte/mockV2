@@ -1,7 +1,7 @@
 {
     "name": "MockV2",
     "start_url": "/index.html",
-    "short_name": "Mock",
+    "short_name": "MockV2",
     "display": "standalone",
     "theme_color": "#fff",
     "background_color": "#fff",

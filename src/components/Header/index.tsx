@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           <a href="https://www.linkedin.com/in/lucas-fonte-02b03a164/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size="30" color={colors.text} />
           </a>
-          <a href="https://github.com/Lucas-Fonte/Mock" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Lucas-Fonte/mockV2" target="_blank" rel="noopener noreferrer">
             <GoMarkGithub size="30" color={colors.text} />
           </a>
           <Link to="/about">

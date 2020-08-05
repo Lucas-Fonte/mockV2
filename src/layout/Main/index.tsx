@@ -8,7 +8,9 @@ const Main: React.FC = () => (
   <Container>
     <Header />
     <Content>
-      <Card content="main" />
+      <Card>
+        <h2>main</h2>
+      </Card>
     </Content>
   </Container>
 );

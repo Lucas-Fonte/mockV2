@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from './styles';
+import { Container, LoadingContainer, ChildrenContainer } from './styles';
 import Loading from '../Loading';
 import { timeout } from '../../utils/tools/timeout';
 
-interface CardProps {
-  content: string;
-}
-const Card = ({ content }: CardProps) => {
-  const [message, setMessage] = useState<string>();
-  const [loading, setLoading] = useState<boolean>();
+const Card: React.FC = ({ children }) => {
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     async function loadData() {
       setLoading(true);
       await timeout(1500);
-      setMessage(content);
       setLoading(false);
     }
 
     loadData();
-  }, [content]);
+  }, [children]);
 
   return (
     <Container>
       {
-      loading ? <Loading loadingType="loading" />
+      loading ? (
+        <LoadingContainer>
+          <Loading loadingType="loading" />
+        </LoadingContainer>
+      )
         : (
-          <>
-            <h2>{message}</h2>
-          </>
+          <ChildrenContainer show={loading}>
+            {children}
+          </ChildrenContainer>
         )
       }
     </Container>
