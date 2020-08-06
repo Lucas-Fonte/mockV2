@@ -39,5 +39,6 @@ const fadeIn = keyframes`
 
 export const ChildrenContainer = styled.div`
   height: 100%;
+  width: 100%;
   animation: ${(props: ChildrenContainerProps) => (props.show ? null : fadeIn)} 0.3s linear;
 `;
