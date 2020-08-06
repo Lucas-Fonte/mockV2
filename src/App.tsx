@@ -44,7 +44,7 @@ const App: React.FC = () => {
         timesToShow={3}
         copyClosePrompt="Close"
         permanentlyHideOnDismiss={false}
-        copyBody="*On Safari.This website has app functionality. Add it to your home screen to use it in fullscreen and while offline."
+        copyBody="(On Safari) This website has app functionality. Add it to your home screen to use it in fullscreen and while offline."
       />
     </>
   );
