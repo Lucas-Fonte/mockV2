@@ -41,7 +41,6 @@ const App: React.FC = () => {
       </Router>
       <PWAPrompt
         promptOnVisit={1}
-        timesToShow={3}
         copyClosePrompt="Close"
         permanentlyHideOnDismiss={false}
         copyBody="(On Safari) This website has app functionality. Add it to your home screen to use it in fullscreen and while offline."
