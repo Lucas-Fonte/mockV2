@@ -24,6 +24,7 @@ export const MarkdownContent = styled.div`
   overflow: auto;
   padding-left: 20%;
   padding-bottom: 15vh;
+  margin-top: 5px; /** Fix for IphoneXR on Safari*/ 
 
 
   @media (max-width: 450px){
