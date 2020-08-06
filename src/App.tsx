@@ -13,6 +13,8 @@ interface AppContextInterface {
   toggleTheme: () => void;
 }
 
+const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
 const AppContext = createContext<AppContextInterface | null>(null);
 
 const {
@@ -20,7 +22,7 @@ const {
 } = AppContext;
 
 const App: React.FC = () => {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', initialTheme);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
