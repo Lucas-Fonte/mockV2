@@ -1,6 +1,7 @@
 import React, { createContext } from 'react';
 import { Router } from 'react-router-dom';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
+import PWAPrompt from 'react-ios-pwa-prompt';
 import GlobalStyle from './styles/global';
 import Routes from './routes';
 import history from './services/history';
@@ -26,17 +27,20 @@ const App: React.FC = () => {
   };
 
   return (
-    <Router history={history}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <AppContextProvider value={{
-          toggleTheme,
-        }}
-        >
-          <Routes />
-        </AppContextProvider>
-      </ThemeProvider>
-    </Router>
+    <>
+      <Router history={history}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <AppContextProvider value={{
+            toggleTheme,
+          }}
+          >
+            <Routes />
+          </AppContextProvider>
+        </ThemeProvider>
+      </Router>
+      <PWAPrompt promptOnVisit={1} timesToShow={3} copyClosePrompt="Close" permanentlyHideOnDismiss={false} />
+    </>
   );
 };
 
