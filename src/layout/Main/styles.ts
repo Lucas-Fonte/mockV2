@@ -18,8 +18,10 @@ export const ProjectsContainer = styled.div`
   flex-direction: column;
   max-width: 95%;
   padding-left: 5%;
+  overflow: auto;
 
   img {
     margin-bottom: 10px;
+    max-width: 95%;
   }
 `;
