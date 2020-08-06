@@ -13,7 +13,7 @@ interface AppContextInterface {
   toggleTheme: () => void;
 }
 
-const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? dark : light;
 
 const AppContext = createContext<AppContextInterface | null>(null);
 
