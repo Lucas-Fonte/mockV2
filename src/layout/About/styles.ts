@@ -56,7 +56,7 @@ export const MarkdownContent = styled.div`
   }
 
   @media (max-height: 600px){
-    padding-top: 100%;
+    padding-top: 110%;
   }
 
   h3:first-of-type {
