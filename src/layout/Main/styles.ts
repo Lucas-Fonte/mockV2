@@ -16,12 +16,14 @@ export const Content = styled.div`
 export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 95%;
+  width: 95%;
+  max-width: 600px;
   padding-left: 5%;
   overflow: auto;
 
   img {
     margin-bottom: 10px;
-    max-width: 95%;
+    width: 95%;
+    max-width: 600px;
   }
 `;

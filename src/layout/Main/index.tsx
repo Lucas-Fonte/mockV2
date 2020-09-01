@@ -6,7 +6,7 @@ import { urlResolver } from '../../utils/tools/urlResolver';
 
 const url = urlResolver('Lucas-Fonte', 'dark');
 
-const mainRepositories = ['mockV2', 'Pineapple', 'GoStack-Challenge', 'CSV-to-SQL'];
+const mainRepositories = ['mockV2', 'server_test', 'Pineapple', 'GoStack-Challenge', 'CSV-to-SQL'];
 
 const REPOS_ARRAY_URLS = mainRepositories.map((repo) => ({
   statsUrl: url.resolveGithubStats(repo),
