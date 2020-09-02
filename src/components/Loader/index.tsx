@@ -3,7 +3,7 @@ import { Container, LoadingContainer, ChildrenContainer } from './styles';
 import Loading from '../Loading';
 import { timeout } from '../../utils/tools/timeout';
 
-const Card: React.FC = ({ children }) => {
+const Loader: React.FC = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,20 +18,15 @@ const Card: React.FC = ({ children }) => {
 
   return (
     <Container>
-      {
-      loading ? (
+      {loading ? (
         <LoadingContainer>
           <Loading loadingType="loading" />
         </LoadingContainer>
-      )
-        : (
-          <ChildrenContainer show={loading}>
-            {children}
-          </ChildrenContainer>
-        )
-      }
+      ) : (
+        <ChildrenContainer show={loading}>{children}</ChildrenContainer>
+      )}
     </Container>
   );
 };
 
-export default Card;
+export default Loader;

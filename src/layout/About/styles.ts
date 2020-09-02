@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  
 `;
 export const Content = styled.div`
   display: flex;
@@ -11,53 +10,31 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 `;
 
 export const MarkdownContent = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+  max-width: 600px;
   overflow: auto;
-  padding-left: 20%;
+  text-align: left;
   padding-bottom: 15vh;
-  margin-top: 5px; /** Fix for IphoneXR on Safari*/ 
+  margin-top: 5px; /** Fix for IphoneXR on Safari*/
 
-
-  @media (max-width: 450px){
+  @media (max-width: 450px) {
     padding-left: 5%;
 
     img {
-      max-width:85%;
+      max-width: 85%;
     }
-  }
-
-  @media (min-width: 1200px){
-    margin-top: -4%;
-    padding-left: 30%;
-  }
-
-  @media (min-width: 1000px){
-     padding-bottom: 35vh;
-  }
-
-  @media (max-height: 900px){
-    padding-top: 30%;
-  }
-
-  @media (max-height: 800px){
-    padding-top: 50%;
-  }
-  
-  @media (max-height: 700px){
-    padding-top: 70%;
-  }
-
-  @media (max-height: 600px){
-    padding-top: 110%;
   }
 
   h3:first-of-type {
@@ -87,18 +64,16 @@ export const MarkdownContent = styled.div`
   }
 
   #toolsList {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto auto;
-      margin-top: 10px;
-      background: #fff;
-      padding: 4px;
-      border-radius: 2px;
-      max-width:85%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-top: 10px;
+    background: #fff;
+    padding: 4px;
+    border-radius: 2px;
+    max-width: 85%;
 
-      img {
-        max-height: 26px;
-      }
+    img {
+      max-height: 26px;
+    }
   }
-
-
 `;

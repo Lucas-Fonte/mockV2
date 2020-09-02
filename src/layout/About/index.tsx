@@ -1,11 +1,14 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable object-curly-newline */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import { Container, Content, MarkdownContent } from './styles';
+import { Container, Content, MarkdownContent, Wrapper } from './styles';
 import Header from '../../components/Header';
-import Card from '../../components/Card';
+import Loader from '../../components/Loader';
 
-const README_URL = 'https://raw.githubusercontent.com/Lucas-Fonte/Lucas-Fonte/master/README.md';
+const README_URL =
+  'https://raw.githubusercontent.com/Lucas-Fonte/Lucas-Fonte/master/README.md';
 
 const About: React.FC = () => {
   const [content, setContent] = useState<string>('');
@@ -23,11 +26,13 @@ const About: React.FC = () => {
     <Container>
       <Header />
       <Content>
-        <Card>
-          <MarkdownContent>
-            <ReactMarkdown source={content} escapeHtml={false} />
-          </MarkdownContent>
-        </Card>
+        <Loader>
+          <Wrapper>
+            <MarkdownContent>
+              <ReactMarkdown source={content} escapeHtml={false} />
+            </MarkdownContent>
+          </Wrapper>
+        </Loader>
       </Content>
     </Container>
   );

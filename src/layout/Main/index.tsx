@@ -1,12 +1,18 @@
 import React from 'react';
 import { Container, Content, ProjectsContainer } from './styles';
-import Card from '../../components/Card';
+import Card from '../../components/Loader';
 import Header from '../../components/Header';
 import { urlResolver } from '../../utils/tools/urlResolver';
 
 const url = urlResolver('Lucas-Fonte', 'dark');
 
-const mainRepositories = ['mockV2', 'server_test', 'Pineapple', 'GoStack-Challenge', 'CSV-to-SQL'];
+const mainRepositories = [
+  'mockV2',
+  'server_test',
+  'Pineapple',
+  'GoStack-Challenge',
+  'CSV-to-SQL',
+];
 
 const REPOS_ARRAY_URLS = mainRepositories.map((repo) => ({
   statsUrl: url.resolveGithubStats(repo),
