@@ -1,3 +1,9 @@
 {
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false,
+    "cSpell.words": [
+        "REPOS",
+        "browserslist",
+        "linebreak",
+        "mockv"
+    ]
 }

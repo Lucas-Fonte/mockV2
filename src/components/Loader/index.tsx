@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Container, LoadingContainer, ChildrenContainer } from './styles';
 import Loading from '../Loading';
-import { timeout } from '../../utils/tools/timeout';
 
-const Loader: React.FC = ({ children }) => {
+interface Loader {
+  loaded?: boolean;
+}
+const Loader: React.FC<Loader> = ({ children, loaded }) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     async function loadData() {
       setLoading(true);
-      await timeout(1500);
-      setLoading(false);
+
+      if (loaded) {
+        setLoading(false);
+      }
     }
 
     loadData();
-  }, [children]);
+  }, [loaded]);
 
   return (
     <Container>
