@@ -9,10 +9,17 @@ This is my portfolio project made with React+Typescript working as a PWA.
 
 ---
 
-![](https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Tools-Netlify-informational?style=flat&logo=netlify&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Tools-GithubREADME-informational?style=flat&logo=github&logoColor=white&color=2bbc8a)
+</p>
+
+<br />
+
+<p align="center">
+<img src="https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&logoColor=white&color=2bbc8a" alt="image" />
+<img src="https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&logoColor=white&color=2bbc8a" alt="image" />
+<img src="https://img.shields.io/badge/Tools-Netlify-informational?style=flat&logo=netlify&logoColor=white&color=2bbc8a" alt="image" />
+<img src="https://img.shields.io/badge/Tools-GithubREADME-informational?style=flat&logo=github&logoColor=white&color=2bbc8a" alt="image" />
+
+</p>
 
 ---
 
