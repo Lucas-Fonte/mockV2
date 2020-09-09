@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Lucas-Fonte/mockV2/master/public/images/icons/apple-icon-152x152.png" alt="ts-logo" width="60"/>
+  <img src="https://raw.githubusercontent.com/Lucas-Fonte/mockV2/master/public/images/icons/apple-icon-152x152.png" alt="ts-logo" width="120"/>
 </p>
 <h1 align="center">
     MockV2
