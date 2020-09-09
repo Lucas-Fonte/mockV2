@@ -4,9 +4,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { Link } from 'react-router-dom';
-import {
-  Container, HorizontalContainer, SideContainer,
-} from './styles';
+import { Container, HorizontalContainer, SideContainer } from './styles';
 import lightLogo from '../../assets/lightLogo.svg';
 import darkLogo from '../../assets/darkLogo.svg';
 import { AppContext } from '../../App';
@@ -21,9 +19,9 @@ const Header: React.FC = () => {
   }, [title]);
   return (
     <Container>
-      <a href=".">
+      <Link to="/">
         <img src={logo} alt="Mock" />
-      </a>
+      </Link>
       <SideContainer>
         <HorizontalContainer>
           <Switch
@@ -37,10 +35,18 @@ const Header: React.FC = () => {
             onColor="#666"
             offColor="#000"
           />
-          <a href="https://www.linkedin.com/in/lucas-fonte-02b03a164/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/lucas-fonte-02b03a164/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin size="30" color={colors.text} />
           </a>
-          <a href="https://github.com/Lucas-Fonte/mockV2" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/Lucas-Fonte/mockV2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GoMarkGithub size="30" color={colors.text} />
           </a>
           <Link to="/about">
