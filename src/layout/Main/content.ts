@@ -6,7 +6,7 @@ export const mainRepositories = [
     name: 'mockV2',
     previewStyle: 'mobile',
     previewUrl: 'https://media1.giphy.com/media/U24GSg7WkOviFVMJZJ/giphy.gif',
-    projectUrl: 'https://mockv2-lucasfonte.netlify.app/',
+    projectUrl: 'https://github.com/Lucas-Fonte/mockV2',
   },
   {
     name: 'server_test',
@@ -35,7 +35,7 @@ export const mainRepositories = [
     previewStyle: 'full',
     previewUrl:
       'https://user-images.githubusercontent.com/53484547/67404553-f1f1ef80-f589-11e9-810b-c19778ae4206.png',
-    projectUrl: null,
+    projectUrl: 'https://github.com/Lucas-Fonte/GoStack-Challenge',
   },
   {
     name: 'trader',
