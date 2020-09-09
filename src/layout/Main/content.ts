@@ -1,12 +1,11 @@
 /* eslint-disable operator-linebreak */
-const previewUrl =
-  'https://raw.githubusercontent.com/Lucas-Fonte/nightmare-vscode-theme/master/images/jack.gif';
+const previewUrl = null;
 
 export const mainRepositories = [
   {
     name: 'mockV2',
-    previewStyle: 'full',
-    previewUrl,
+    previewStyle: 'mobile',
+    previewUrl: 'https://media1.giphy.com/media/U24GSg7WkOviFVMJZJ/giphy.gif',
     projectUrl: 'https://mockv2-lucasfonte.netlify.app/',
   },
   {

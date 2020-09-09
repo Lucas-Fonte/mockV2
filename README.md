@@ -25,7 +25,7 @@ This is my portfolio project made with React+Typescript working as a PWA.
 
 ### Usage
 
-Gifs...
+<img src="https://media1.giphy.com/media/U24GSg7WkOviFVMJZJ/giphy.gif" alt="image" />
 
 ---
 
