@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import { Router } from 'react-router-dom';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import PWAPrompt from 'react-ios-pwa-prompt';
@@ -11,21 +11,31 @@ import usePersistedState from './utils/hooks/usePersistedState';
 
 interface AppContextInterface {
   toggleTheme: () => void;
+  toggleDrawer: () => void;
+  drawerOpen: boolean;
 }
 
-const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? dark : light;
+const initialTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+  ? dark
+  : light;
 
 const AppContext = createContext<AppContextInterface | null>(null);
 
-const {
-  Provider: AppContextProvider,
-} = AppContext;
+const { Provider: AppContextProvider } = AppContext;
 
 const App: React.FC = () => {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', initialTheme);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>(
+    'theme',
+    initialTheme
+  );
+  const [drawerOpen, setDrawerOpen] = useState(window.innerWidth > 1200);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
+  };
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
   };
 
   return (
@@ -33,9 +43,12 @@ const App: React.FC = () => {
       <Router history={history}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <AppContextProvider value={{
-            toggleTheme,
-          }}
+          <AppContextProvider
+            value={{
+              toggleTheme,
+              toggleDrawer,
+              drawerOpen,
+            }}
           >
             <Routes />
           </AppContextProvider>

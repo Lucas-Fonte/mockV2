@@ -7,6 +7,7 @@ import { Container, Content, MarkdownContent, Wrapper } from './styles';
 import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import { timeout } from '../../utils/tools/timeout';
+import { DrawerMenu } from '../../components/DrawerMenu';
 
 const README_URL =
   'https://raw.githubusercontent.com/Lucas-Fonte/Lucas-Fonte/master/README.md';
@@ -29,6 +30,7 @@ const About: React.FC = () => {
 
   return (
     <Container>
+      <DrawerMenu />
       <Header />
       <Content>
         <Loader loaded={loaded}>

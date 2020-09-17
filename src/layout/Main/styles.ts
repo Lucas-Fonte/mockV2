@@ -32,10 +32,15 @@ export const ProjectsContainer = styled.div`
   height: 100%;
 `;
 
-export const ProjectsWrapper = styled.div`
+interface ProjectsWrapperProps {
+  isMobile?: boolean;
+}
+
+export const ProjectsWrapper = styled.div<ProjectsWrapperProps>`
   width: 100%;
   height: 100%;
-  max-width: 400px;
+  max-width: ${(props) => (props.isMobile ? '400px' : '800px')};
+  margin-left: ${(props) => (props.isMobile ? null : '15vw')};
   padding-left: 10px;
   padding-right: 10px;
   overflow: auto;
@@ -45,8 +50,17 @@ export const ProjectsWrapper = styled.div`
     width: 100%;
   }
 `;
+
+export const ProjectsList = styled.div`
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`;
+
 export const ProjectContainer = styled.div`
   margin-bottom: 15px;
+  width: 350px;
 `;
 
 interface ZoomPreviewProps {

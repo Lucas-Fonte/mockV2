@@ -6,6 +6,7 @@ import {
   Content,
   ProjectContainer,
   ProjectsContainer,
+  ProjectsList,
   ProjectsWrapper,
   TitleWrapper,
   ZoomPreview,
@@ -14,8 +15,9 @@ import Loader from '../../components/Loader';
 import Header from '../../components/Header';
 import { urlResolver } from '../../utils/tools/urlResolver';
 import { timeout } from '../../utils/tools/timeout';
-import { mainRepositories } from './content';
+import { mainRepositories } from '../../data/content';
 import { PreviewPlayer } from '../../components/PreviewPlayer';
+import { DrawerMenu } from '../../components/DrawerMenu';
 
 const url = urlResolver('Lucas-Fonte', 'dark');
 
@@ -82,54 +84,57 @@ const Main: React.FC = () => {
         isPlaying={isPlaying}
         onClick={() => (isPlaying ? handleZoomOff() : null)}
       >
+        <DrawerMenu />
         <Header />
         <Content>
           <Loader loaded={loaded}>
             <ProjectsContainer>
-              <ProjectsWrapper>
+              <ProjectsWrapper isMobile={window.innerWidth <= 1200}>
                 <TitleWrapper>
                   <h1>Projects</h1>
                 </TitleWrapper>
-                {data.map(
-                  (
-                    {
-                      statsUrl,
-                      githubUrl,
-                      previewStyle,
-                      previewUrl,
-                      projectUrl,
-                      previewButton,
-                      previewOpacity,
-                      zoomOn,
-                    },
-                    index
-                  ) => (
-                    <ProjectContainer key={`repo${statsUrl}`}>
-                      <a
-                        href={githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src={statsUrl}
-                          alt={`repo${index}`}
-                          id={`repo${index}`}
+                <ProjectsList>
+                  {data.map(
+                    (
+                      {
+                        statsUrl,
+                        githubUrl,
+                        previewStyle,
+                        previewUrl,
+                        projectUrl,
+                        previewButton,
+                        previewOpacity,
+                        zoomOn,
+                      },
+                      index
+                    ) => (
+                      <ProjectContainer key={`repo${statsUrl}`}>
+                        <PreviewPlayer
+                          index={index}
+                          previewOpacity={previewOpacity}
+                          previewStyle={previewStyle}
+                          zoomOn={zoomOn}
+                          previewButton={previewButton}
+                          previewUrl={previewUrl}
+                          projectUrl={projectUrl}
+                          handlePlayPreview={handlePlayPreview}
+                          handleZoomOn={handleZoomOn}
                         />
-                      </a>
-                      <PreviewPlayer
-                        index={index}
-                        previewOpacity={previewOpacity}
-                        previewStyle={previewStyle}
-                        zoomOn={zoomOn}
-                        previewButton={previewButton}
-                        previewUrl={previewUrl}
-                        projectUrl={projectUrl}
-                        handlePlayPreview={handlePlayPreview}
-                        handleZoomOn={handleZoomOn}
-                      />
-                    </ProjectContainer>
-                  )
-                )}
+                        <a
+                          href={githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={statsUrl}
+                            alt={`repo${index}`}
+                            id={`repo${index}`}
+                          />
+                        </a>
+                      </ProjectContainer>
+                    )
+                  )}
+                </ProjectsList>
               </ProjectsWrapper>
             </ProjectsContainer>
           </Loader>

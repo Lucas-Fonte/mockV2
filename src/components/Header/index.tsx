@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { GoMarkGithub } from 'react-icons/go';
 import { FaLinkedin } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -11,7 +12,7 @@ import { AppContext } from '../../App';
 
 const Header: React.FC = () => {
   const { title, colors } = useContext(ThemeContext);
-  const { toggleTheme }: any = useContext(AppContext);
+  const { toggleTheme, toggleDrawer }: any = useContext(AppContext);
   const [logo, setLogo] = useState(darkLogo);
 
   useEffect(() => {
@@ -49,9 +50,7 @@ const Header: React.FC = () => {
           >
             <GoMarkGithub size="30" color={colors.text} />
           </a>
-          <Link to="/about">
-            <h2 style={{ color: colors.text }}>about</h2>
-          </Link>
+          <AiOutlineMenu size="30" color={colors.text} onClick={toggleDrawer} />
         </HorizontalContainer>
       </SideContainer>
     </Container>
