@@ -32,15 +32,15 @@ export const ProjectsContainer = styled.div`
   height: 100%;
 `;
 
-interface ProjectsWrapperProps {
+interface ProjectsProps {
   isMobile?: boolean;
 }
 
-export const ProjectsWrapper = styled.div<ProjectsWrapperProps>`
+export const ProjectsWrapper = styled.div<ProjectsProps>`
   width: 100%;
   height: 100%;
   max-width: ${(props) => (props.isMobile ? '400px' : '800px')};
-  margin-left: ${(props) => (props.isMobile ? null : '15vw')};
+  margin-left: ${(props) => (props.isMobile ? null : '300px')};
   padding-left: 10px;
   padding-right: 10px;
   overflow: auto;
@@ -56,6 +56,10 @@ export const ProjectsList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 export const ProjectContainer = styled.div`

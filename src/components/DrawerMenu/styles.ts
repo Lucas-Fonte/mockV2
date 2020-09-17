@@ -11,7 +11,7 @@ export const DrawerContainer = styled.div<DrawerContainerProps>`
   width: ${(props) => (props.drawerOpen ? '75vw' : '0px')};
   position: absolute;
   z-index: 10;
-  max-width: 400px;
+  max-width: 300px;
   transition: width 0.2s ease-in-out;
 
   img {
