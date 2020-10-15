@@ -20,7 +20,7 @@ export const BookList = styled.ul`
   justify-content: space-around;
   flex-wrap: wrap;
 
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     margin-left: 0px;
   }

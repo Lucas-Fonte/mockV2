@@ -1,13 +1,7 @@
 /* eslint-disable no-restricted-globals */
 const CACHE_NAME = 'Mock';
 
-const urlsToCache = [
-  '/',
-  // '/static/js/bundle.js',
-  // '/static/js/main.chunk.js',
-  // '/static/js/1.chunk.js',
-  // '/static/js/0.chunk.js',
-];
+const urlsToCache = ['/'];
 
 self.addEventListener('install', (event) => {
   // Perform install steps
