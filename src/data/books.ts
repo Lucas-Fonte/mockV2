@@ -16,7 +16,7 @@ export const books = [
       'https://www.amazon.com/-/pt/dp/076117897X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=show+your+work&qid=1602799161&sr=8-1',
     cover: require('../assets/books/showYourWork_cover.jpg'),
     thoughts: `Great book, a quick read with a lot of good insights
-              around content output, it inspired me on creating this 
+              around content output, it inspired me to creating this 
               section of my portfolio.`,
   },
 ];
