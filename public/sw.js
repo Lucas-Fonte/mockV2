@@ -3,16 +3,16 @@ const CACHE_NAME = 'Mock';
 
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/js/main.chunk.js',
-  '/static/js/1.chunk.js',
-  '/static/js/0.chunk.js',
+  // '/static/js/bundle.js',
+  // '/static/js/main.chunk.js',
+  // '/static/js/1.chunk.js',
+  // '/static/js/0.chunk.js',
 ];
 
 self.addEventListener('install', (event) => {
   // Perform install steps
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)),
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
   );
 });
 
@@ -24,6 +24,6 @@ self.addEventListener('fetch', (event) => {
         return response;
       }
       return fetch(event.request);
-    }),
+    })
   );
 });
