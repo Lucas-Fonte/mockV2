@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { useEffect, useState } from 'react';
-import { BookCard, BookList, Container, Content } from './styles';
+import { BookCard, BookList, BooksWrapper, Container, Content } from './styles';
 import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import { timeout } from '../../utils/tools/timeout';
@@ -25,19 +25,21 @@ const Books: React.FC = () => {
       <Header />
       <Content>
         <Loader loaded={loaded}>
-          <BookList>
-            {books.map((book) => (
-              <a key={book.title} href={book.url} target="__blank">
-                <BookCard>
-                  <img src={book.cover} alt={book.title} />
-                  <div>
-                    <h2>{book.title}</h2>
-                    <p>{book.thoughts}</p>
-                  </div>
-                </BookCard>
-              </a>
-            ))}
-          </BookList>
+          <BooksWrapper>
+            <BookList>
+              {books.map((book) => (
+                <a key={book.title} href={book.url} target="__blank">
+                  <BookCard>
+                    <img src={book.cover} alt={book.title} />
+                    <div>
+                      <h2>{book.title}</h2>
+                      <p>{book.thoughts}</p>
+                    </div>
+                  </BookCard>
+                </a>
+              ))}
+            </BookList>
+          </BooksWrapper>
         </Loader>
       </Content>
     </Container>

@@ -12,18 +12,28 @@ export const Content = styled.div`
   height: 100%;
 `;
 
-export const BookList = styled.ul`
-  display: flex;
+export const BooksWrapper = styled.div`
+  width: 100%;
+  height: 100%;
   max-width: 800px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: auto;
+  padding-bottom: 10vh;
   margin-left: 300px;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     margin-left: 0px;
   }
+`;
+
+export const BookList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 export const BookCard = styled.li`
@@ -41,7 +51,7 @@ export const BookCard = styled.li`
   img {
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
-    width: 160px;
+    width: 170px;
     height: 220px;
   }
 
