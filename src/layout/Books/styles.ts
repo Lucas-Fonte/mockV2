@@ -19,7 +19,7 @@ export const BooksWrapper = styled.div`
   padding-left: 10px;
   padding-right: 10px;
   overflow: auto;
-  padding-bottom: 10vh;
+  padding-bottom: 15vh;
   margin-left: 300px;
 
   @media (max-width: 800px) {

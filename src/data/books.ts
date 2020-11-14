@@ -20,4 +20,13 @@ export const books = [
               around content output, it inspired me to creating this 
               section of my portfolio.`,
   },
+  {
+    title: 'Design Patterns',
+    url:
+      'https://www.amazon.com.br/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8/ref=asc_df_B000SEIBB8/?tag=googleshopp00-20&linkCode=df0&hvadid=379725882390&hvpos=&hvnetw=g&hvrand=17396106931424707150&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-406130702825&psc=1',
+    cover: require('../assets/books/designPatterns_cover.jpg'),
+    thoughts: `Pretty good book, I do feel like it is better used as a side 
+              helper when designing projects and a very useful tool to understand
+              existing designs using categories`,
+  },
 ];
