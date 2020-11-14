@@ -1,5 +1,6 @@
 {
   "name": "mockv2",
+  "homepage": "https://mockv2-lucasfonte.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
