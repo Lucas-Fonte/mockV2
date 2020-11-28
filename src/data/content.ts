@@ -1,12 +1,26 @@
 /* eslint-disable operator-linebreak */
 const previewUrl = null;
 
-export const mainRepositories = [
+interface Content {
+  name: string | null;
+  previewStyle: string;
+  previewUrl: string | null;
+  projectUrl: string | null;
+}
+
+export const mainRepositories: Array<Content> = [
   {
     name: 'mockV2',
     previewStyle: 'mobile',
     previewUrl: 'https://media1.giphy.com/media/U24GSg7WkOviFVMJZJ/giphy.gif',
     projectUrl: 'https://github.com/Lucas-Fonte/mockV2',
+  },
+  {
+    name: 'faster',
+    previewStyle: 'full',
+    previewUrl:
+      'https://raw.githubusercontent.com/Lucas-Fonte/faster/main/dist/assets/usage_example.png',
+    projectUrl: 'https://github.com/Lucas-Fonte/faster',
   },
   {
     name: 'server_test',

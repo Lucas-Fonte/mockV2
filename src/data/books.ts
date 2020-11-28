@@ -29,4 +29,13 @@ export const books = [
               helper when designing projects and a very useful tool to understand
               existing designs using categories`,
   },
+  {
+    title: 'The Mundanity of Excellence',
+    url:
+      'https://academics.hamilton.edu/documents/themundanityofexcellence.pdf',
+    cover: require('../assets/books/theMundanityOfExcellence_cover.jpeg'),
+    thoughts: `Main takeaways: (1) Not to romanticize excellence, with something
+              like talent. (2) Excellence is just combinations 
+              of trivial things done consistently.`,
+  },
 ];
