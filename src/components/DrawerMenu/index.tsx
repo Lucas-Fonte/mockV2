@@ -47,7 +47,7 @@ const DrawerMenu: React.FC = () => {
             <h1 onClick={handleMenuClickOnMobile}>about</h1>
           </Link>
           <Link to="/books">
-            <h1 onClick={handleMenuClickOnMobile}>books + articles</h1>
+            <h1 onClick={handleMenuClickOnMobile}>books & papers</h1>
           </Link>
           <h1 style={{ color: '#bbb' }}>podcasts</h1>
           <h1 style={{ color: '#bbb' }}>certificates</h1>
