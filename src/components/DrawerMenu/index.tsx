@@ -49,6 +49,7 @@ const DrawerMenu: React.FC = () => {
           <Link to="/books">
             <h1 onClick={handleMenuClickOnMobile}>books + articles</h1>
           </Link>
+          <h1 style={{ color: '#bbb' }}>podcasts</h1>
           <h1 style={{ color: '#bbb' }}>certificates</h1>
         </>
       ) : null}
